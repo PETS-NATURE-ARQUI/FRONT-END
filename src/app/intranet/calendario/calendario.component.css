@@ -6,7 +6,7 @@
 
 .sidenav {
   width: 250px; /* Adjusted width to make it smaller */
-  background-color: #4b99a7;
+  background-color: #f3f3f3;
   color: black;
   position: absolute;
 }
@@ -16,7 +16,7 @@
 }
 
 .main-content {
-  padding: 10px; /* Reduced padding */
+  padding: 50px 10px;  /* Reduced padding */
   transition: margin-left 0.3s;
 }
 
@@ -54,3 +54,4 @@ b {
 .full-calendar {
   max-width: 100%; /* Ensure the calendar uses the available space */
 }
+

@@ -5,6 +5,7 @@ import { RazaService } from '../../service/raza.service';
 import { Observable, of } from 'rxjs';
 import { map, startWith, switchMap, catchError } from 'rxjs/operators';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-r-mascota',
@@ -17,11 +18,13 @@ export class RMascotaComponent {
   mascotaForm: FormGroup;
   imageURL?: string;
   filteredRazas!: Observable<any[]>;
+  today: Date = new Date();
 
   constructor(
     private fb: FormBuilder,
     private mascotaService: MascotaService,
-    private razaService: RazaService
+    private razaService: RazaService,
+    private router: Router
   ) {
     this.mascotaForm = this.fb.group({
       nombreMascota: ['', Validators.required],
@@ -96,11 +99,15 @@ export class RMascotaComponent {
     }
 
     this.mascotaService.agregarMascota(formData).subscribe({
-      next: (res) => Swal.fire({
-        icon: 'success',
-        title: 'Éxito',
-        text: 'Mascota registrada correctamente.',
-      }),
+      next: (res) => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Éxito',
+          text: 'Mascota registrada correctamente.',
+        }).then(() => {
+          this.router.navigate(['/intranet/user/lista-mascotas']); // Redirección después del éxito
+        });
+      },
       error: (err) => Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -111,5 +118,9 @@ export class RMascotaComponent {
 
   formatDate(date: Date): string {
     return date.toISOString().split('T')[0]; // Formato 'yyyy-MM-dd'
+  }
+
+  volverALista() {
+    this.router.navigate(['/intranet/user/lista-mascotas']);
   }
 }

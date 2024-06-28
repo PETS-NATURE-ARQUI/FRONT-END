@@ -1,4 +1,6 @@
-<div class="container mt-5" *ngIf="usuario">
+<div *ngIf="usuario">
+<h1 class="text-center perfil-usuario-titulo">PERFIL DE USUARIO</h1>
+<div class="container mt-5" >
   <div class="row">
     <div class="col-md-4">
       <div class="profile-card-left text-center">
@@ -12,7 +14,7 @@
     </div>
     <div class="col-md-8">
       <div class="profile-card-right">
-        <h1 class="mb-4">Perfil de Usuario</h1>
+        <h1 class="mb-4 datos-usuario">Datos Personales</h1>
         <div *ngIf="!editMode">
           <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
           <p><strong>Apellido:</strong> {{ usuario.apellido }}</p>
@@ -56,4 +58,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

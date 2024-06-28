@@ -1,9 +1,40 @@
 .example-card {
-    width: 100%;
-    height: 100%;
-  }
+  width: 100%;
+  height: 100%;
+}
 
-  .example-header-image {
-    background-image: url('https://via.placeholder.com/50');
-    background-size: cover;
-  }
+.example-header-image {
+  background-image: url('../../../assets/usericon.png');
+  background-size: cover;
+}
+
+.perro-duda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-lista-mascotas {
+  font-weight: bold; /* Negrita */
+  padding-top: 50px;
+  padding-bottom: 15px;
+  font-size: 28px;
+}
+
+.lista-mascotas-container {
+  padding-bottom: 50px; /* Espacio inferior para separación con respecto al footer */
+}
+
+.card-img-top {
+  width: 100%; /* Ancho completo del contenedor */
+  height: 300px; /* Altura fija */
+  object-fit: cover; /* Mantiene la proporción de la imagen mientras cubre el área asignada */
+  padding-bottom: 20px;
+}
+
+.titulo-lista-mascotas {
+  font-weight: bold; /* Negrita */
+  padding-top: 50px;
+  padding-bottom: 15px;
+  font-size: 28px;
+}

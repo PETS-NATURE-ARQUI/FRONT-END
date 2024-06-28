@@ -5,15 +5,21 @@ html, body {
 
 .container {
   max-width: 1200px;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
 }
 
 .row {
+  display: flex;
   width: 100%;
+}
+
+.col-md-4, .col-md-8 {
+  flex: 1; /* Ajustar columnas para que tengan el mismo tamaño */
 }
 
 .profile-card-left,
@@ -24,6 +30,7 @@ html, body {
   padding: 20px;
   margin-top: 20px;
   border: 1px solid #ddd; /* Añadir un borde más visible */
+  text-align: center; /* Centrar el contenido */
 }
 
 .profile-card-left {
@@ -33,11 +40,20 @@ html, body {
 .profile-card-left h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #01122d;
 }
 
 .profile-card-left p {
   font-size: 16px;
   color: #555;
+}
+
+.profile-card-right {
+  text-align: center; /* Centrar el contenido */
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-color: #cfedef;;
+
 }
 
 .profile-card-right h1 {
@@ -92,4 +108,21 @@ html, body {
 
 .text-center .btn {
   margin: 10px 5px;
+}
+
+/* Ajuste adicional para centrar el formulario de edición */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.datos-usuario {
+  font-weight: bold; /* Asegura que el texto esté en negrita */
+}
+
+.perfil-usuario-titulo {
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrado */
+  padding-top: 50px;
 }
