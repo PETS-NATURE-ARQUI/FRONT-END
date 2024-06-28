@@ -1,5 +1,13 @@
 <div class="container mt-4 lista-mascotas-container">
   <h2 class="mb-3 text-center titulo-lista-mascotas">LISTA DE MASCOTAS ({{ cantidadMascotas }}/10)</h2>
+  <div class="text-center">
+    <ng-container [ngSwitch]="estadoGeneral">
+      <img *ngSwitchCase="'Feliz'" src="../../../assets/perritofeli.webp" alt="Estado Feliz" class="estado-general-img">
+      <img *ngSwitchCase="'Neutral'" src="../../../assets/PerroNeutral.jpg" alt="Estado Neutral" class="estado-general-img">
+      <img *ngSwitchCase="'Triste'" src="../../../assets/perroTriste.jpg" alt="Estado Triste" class="estado-general-img">
+    </ng-container>
+  </div>
+  <h3 class="mb-3 text-center">Estado General: {{ estadoGeneral }}</h3>
 
   <ng-container *ngIf="cantidadMascotas === 0; else mascotasList">
 
@@ -27,7 +35,7 @@
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
               <mat-card-title>{{ mascota.nombreMascota }}</mat-card-title>
-              <mat-card-subtitle>{{ mascota.raza }}</mat-card-subtitle>
+              <mat-card-subtitle>{{ estadosMascotas[mascota.nombreMascota] }} - {{ eventosMascotas[mascota.nombreMascota] }} eventos</mat-card-subtitle>
             </mat-card-header>
             <img *ngIf="mascota.fotoMascota" [src]="'data:image/jpeg;base64,' + mascota.fotoMascota" alt="Foto de {{ mascota.nombreMascota }}" class="card-img-top">
             <mat-card-content>
@@ -38,6 +46,9 @@
               <p><strong>Detalles:</strong> {{ mascota.detalles }}</p>
               <p><strong>Raza:</strong> {{ mascota.raza }}</p>
             </mat-card-content>
+            <mat-card-actions>
+              <button mat-button (click)="editarMascota(mascota.id)">Editar</button>
+            </mat-card-actions>
           </mat-card>
         </div>
       </ng-container>

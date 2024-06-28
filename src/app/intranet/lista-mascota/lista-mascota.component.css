@@ -38,3 +38,12 @@
   padding-bottom: 15px;
   font-size: 28px;
 }
+
+.estado-general-img {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
