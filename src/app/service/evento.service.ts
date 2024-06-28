@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import baserUrl from './helper';
 
 export interface DatosRegistroEvento {
   veterinaria: string;
@@ -37,7 +38,7 @@ export interface DatosDetallesEvento {
   providedIn: 'root'
 })
 export class EventoService {
-  private apiUrl = '${baserUrl}/api/v1/evento';
+  private apiUrl = `${baserUrl}/api/v1/evento`;
 
   constructor(private http: HttpClient) {}
 
