@@ -37,7 +37,7 @@ export interface DatosDetallesEvento {
   providedIn: 'root'
 })
 export class EventoService {
-  private apiUrl = '{baserUrl}/api/v1/evento';
+  private apiUrl = '${baserUrl}/api/v1/evento';
 
   constructor(private http: HttpClient) {}
 
