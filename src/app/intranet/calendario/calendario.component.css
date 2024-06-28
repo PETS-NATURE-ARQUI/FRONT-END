@@ -5,18 +5,24 @@
 }
 
 .sidenav {
-  width: 250px; /* Adjusted width to make it smaller */
+  width: 250px; 
+  width: 250px; 
   background-color: #4b99a7;
+  background-color: #f3f3f3;
   color: black;
+  color: black;
+  position: absolute;
   position: absolute;
 }
 
 .sidenav-content {
-  padding: 10px; /* Reduced padding */
+  padding: 10px; 
 }
 
 .main-content {
-  padding: 10px; /* Reduced padding */
+  padding: 10px; 
+  padding: 50px 10px;  
+  transition: margin-left 0.3s;
   transition: margin-left 0.3s;
 }
 
