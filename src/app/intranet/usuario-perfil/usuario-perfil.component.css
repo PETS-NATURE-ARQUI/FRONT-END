@@ -30,7 +30,7 @@ html, body {
   padding: 20px;
   margin-top: 20px;
   border: 1px solid #ddd; /* Añadir un borde más visible */
-  text-align: center;
+  text-align: center; /* Centrar el contenido */
 }
 
 .profile-card-left {
@@ -110,6 +110,7 @@ html, body {
   margin: 10px 5px;
 }
 
+/* Ajuste adicional para centrar el formulario de edición */
 form {
   display: flex;
   flex-direction: column;
@@ -117,11 +118,11 @@ form {
 }
 
 .datos-usuario {
-  font-weight: bold;
+  font-weight: bold; /* Asegura que el texto esté en negrita */
 }
 
 .perfil-usuario-titulo {
-  font-weight: bold;
-  text-align: center; 
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrado */
   padding-top: 50px;
 }

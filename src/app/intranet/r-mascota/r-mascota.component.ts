@@ -105,7 +105,7 @@ export class RMascotaComponent {
           title: 'Éxito',
           text: 'Mascota registrada correctamente.',
         }).then(() => {
-          this.router.navigate(['/intranet/user/lista-mascotas']);
+          this.router.navigate(['/intranet/user/lista-mascotas']); // Redirección después del éxito
         });
       },
       error: (err) => Swal.fire({
@@ -117,7 +117,7 @@ export class RMascotaComponent {
   }
 
   formatDate(date: Date): string {
-    return date.toISOString().split('T')[0];
+    return date.toISOString().split('T')[0]; // Formato 'yyyy-MM-dd'
   }
 
   volverALista() {

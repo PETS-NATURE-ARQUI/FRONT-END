@@ -1,39 +1,39 @@
 .petsnature-footer {
-    background-color: #01122d;
-    color: #fff;
-    padding: 45px 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
+  background-color: #01122d;
+  color: #fff;
+  padding: 45px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
 
-  .footer-content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-  }
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
 
-  .footer-logo img {
-    height: 70px;
-    margin-bottom: 20px;
-  }
+.footer-logo img {
+  height: 70px;
+  margin-bottom: 20px;
+}
 
-  .footer-logo p {
-    margin-left: 10px;
-    font-size: 0.9em;
-    color: #aaa;
-  }
+.footer-logo p {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: #aaa;
+}
 
-  .footer-social a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.2em;
-  }
+.footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
 
-  .footer-credits p {
-    font-size: 0.8em;
-    color: #aaa;
-  }
+.footer-credits p {
+  font-size: 0.8em;
+  color: #aaa;
+}
